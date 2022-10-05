@@ -1,13 +1,17 @@
 
+[![Arduino CI](https://github.com/RobTillaart/DHT20/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![Arduino-lint](https://github.com/RobTillaart/DHT20/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/DHT20/actions/workflows/arduino-lint.yml)
+[![JSON check](https://github.com/RobTillaart/DHT20/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/DHT20/actions/workflows/jsoncheck.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/DHT20/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/DHT20.svg?maxAge=3600)](https://github.com/RobTillaart/DHT20/releases)
+
 
 # DHT20
 
-DHT20 I2C library for Particle devices
+Arduino library for I2C DHT20 temperature and humidity sensor.
 
 
 ## Description
-
-This is a DHT20 I2C library for Particle devices (e.g. Photon, Argon, Boron) based on the [Arduino library](https://github.com/RobTillaart/DHT20) created by [Rob Tillaart](https://github.com/RobTillaart)
 
 The library must be initiated by calling the **begin()** function, 
 or **begin(dataPin, clockPin)** for **ESP32** and similar platforms.
@@ -39,8 +43,8 @@ Front view
 
 ### Tested
 
-Verified to work with Particle Argon
-
+Verified to work with Arduino UNO and ESP32.
+Please let me know if other platforms work (or not).
 
 
 ## Interface
@@ -169,24 +173,4 @@ See examples
 - **bool getIgnoreChecksum()** get checksum flag. for completeness.
 - 
 
-## Contributing
 
-Here's how you can make changes to this library and eventually contribute those changes back.
-
-To get started, [clone the library from GitHub to your local machine](https://help.github.com/articles/cloning-a-repository/).
-
-Change the name of the library in `library.properties` to something different. You can add your name at then end.
-
-Modify the sources in <src> and <examples> with the new behavior.
-
-To compile an example, use `particle compile examples/usage` command in [Particle CLI](https://docs.particle.io/guide/tools-and-features/cli#update-your-device-remotely) or use our [Desktop IDE](https://docs.particle.io/guide/tools-and-features/dev/#compiling-code).
-
-After your changes are done you can upload them with `particle library upload` or `Upload` command in the IDE. This will create a private (only visible by you) library that you can use in other projects. Do `particle library add DHT20_I2C_Particle_myname` to add the library to a project on your machine or add the DHT20_I2C_Particle_myname library to a project on the Web IDE or Desktop IDE.
-
-At this point, you can create a [GitHub pull request](https://help.github.com/articles/about-pull-requests/) with your changes to the original library. 
-
-If you wish to make your library public, use `particle library publish` or `Publish` command.
-
-## Maintainer
-
-Rob Parke
